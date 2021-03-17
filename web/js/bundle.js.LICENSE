@@ -371,17 +371,17 @@
 /* 60 */
 
 /*!
- * jQuery JavaScript Library v3.5.1
+ * jQuery JavaScript Library v3.6.0
  * https://jquery.com/
  *
  * Includes Sizzle.js
  * https://sizzlejs.com/
  *
- * Copyright JS Foundation and other contributors
+ * Copyright OpenJS Foundation and other contributors
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2020-05-04T22:49Z
+ * Date: 2021-03-02T17:08Z
  */
 
 // For CommonJS and CommonJS-like environments where a proper `window`
@@ -415,6 +415,12 @@
 // (i.e., `typeof document.createElement( "object" ) === "function"`).
 
 // We don't want to classify *any* DOM node as a function.
+
+// Support: QtWeb <=3.8.5, WebKit <=534.34, wkhtmltopdf tool <=0.12.5
+
+// Plus for old WebKit, typeof returns "function" for HTML collections
+
+// (e.g., `typeof document.getElementsByTagName("div") === "function"`). (gh-4756)
 
 // Support: Firefox 64+, Edge 18+
 
@@ -553,14 +559,14 @@
 // Populate the class2type map
 
 /*!
- * Sizzle CSS Selector Engine v2.3.5
+ * Sizzle CSS Selector Engine v2.3.6
  * https://sizzlejs.com/
  *
  * Copyright JS Foundation and other contributors
  * Released under the MIT license
  * https://js.foundation/
  *
- * Date: 2020-03-14
+ * Date: 2021-02-16
  */
 
 // Local document vars
@@ -1710,7 +1716,7 @@
 
 // subordinate fulfillment data
 
-// the master Deferred
+// the primary Deferred
 
 // subordinate callback factory
 
@@ -2101,6 +2107,16 @@
 
 // focus() and blur() are asynchronous
 
+// Support: Chrome 86+
+
+// In Chrome, if an element having a focusout handler is blurred by
+
+// clicking outside of it, it invokes the handler synchronously. If
+
+// that handler calls `.remove()` on the element, the data is cleared,
+
+// leaving `result` undefined. We need to guard against this.
+
 // Cancel the outer synthetic event
 
 // If this is an inner synthetic event for an event with a bubbling surrogate
@@ -2265,10 +2281,6 @@
 
 // Includes all common event props including KeyEvent and MouseEvent specific props
 
-// Add which for key events
-
-// Add which for click: 1 === left; 2 === middle; 3 === right
-
 // Utilize native event if possible so blur/focus sequence is correct
 
 // dataPriv.set( this, "focus", ... )
@@ -2276,6 +2288,10 @@
 // dataPriv.set( this, "blur", ... )
 
 // Force setup before trigger
+
+// Suppress native focus or blur as it's already being fired
+
+// in leverageNative.
 
 // Create mouseenter/leave events using mouseover/out and event-time checks
 
@@ -2454,6 +2470,28 @@
 // Behavior in IE 9 is more subtle than in newer versions & it passes
 
 // some versions of this test; make sure not to make it pass there!
+
+// Support: Firefox 70+
+
+// Only Firefox includes border widths
+
+// in computed dimensions. (gh-4529)
+
+// Height set through cssText does not get applied.
+
+// Computed height then comes back as 0.
+
+// Support: Android 8 Chrome 86+
+
+// In our bodyBackground.html iframe,
+
+// display for all div elements is set to "inline",
+
+// which causes a problem only in Android 8 Chrome 86.
+
+// Ensuring the div is display: block
+
+// gets around this issue.
 
 // Return a vendor-prefixed property or undefined
 
@@ -3232,7 +3270,7 @@
  * Also sets the responseXXX fields on the jqXHR instance
  */
 
-// Use a noop converter for missing script
+// Use a noop converter for missing script but not if jsonp
 
 // Convert no matter what (that way responseXXX fields are always set)
 
@@ -5010,18 +5048,18 @@
 /* 310 */
 
 /*!
-  * Bootstrap v4.5.0 (https://getbootstrap.com/)
-  * Copyright 2011-2020 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
-  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+  * Bootstrap v4.6.0 (https://getbootstrap.com/)
+  * Copyright 2011-2021 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
   */
+
+/*#__PURE__*/
 
 /**
    * --------------------------------------------------------------------------
    * Public Util Api
    * --------------------------------------------------------------------------
    */
-
-// eslint-disable-next-line no-bitwise
 
 // "~~" acts like a faster Math.floor() here
 
@@ -5030,8 +5068,6 @@
 // Return 0 if element or transition duration is not found
 
 // If multiple durations are defined, take the first
-
-// TODO: Remove in v5
 
 // Shoutout AngusCroll (https://goo.gl/pxwQGp)
 
@@ -5046,8 +5082,6 @@
    * Constants
    * ------------------------------------------------------------------------
    */
-
-/*#__PURE__*/
 
 // Getters
 
@@ -5109,7 +5143,7 @@
 
 // preventDefault only for <a> elements (which change the URL) not inside the collapsible element
 
-// Disable totally Popper.js for Dropdown in Navbar
+// Totally disable Popper for Dropdowns in Navbar
 
 /**
          * Check for Popper dependency
@@ -5134,7 +5168,7 @@
 
 // Handle dropup
 
-// Disable Popper.js if we have a static display
+// Disable Popper if we have a static display
 
 // If this is a touch-enabled device we remove the extra
 
@@ -5194,8 +5228,8 @@
 
 /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.0): tools/sanitizer.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Bootstrap (v4.6.0): tools/sanitizer.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
@@ -5211,8 +5245,8 @@
 
 /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v4.5.0): util.js
-   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+   * Bootstrap (v4.6.0): util.js
+   * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
 
@@ -6436,6 +6470,8 @@
 //strictClass: 'lazystrict',
 
 //preloadAfterLoad: false,
+
+// loadMode can be also a string!
 
 // Part of this can be removed as soon as this fix is older: https://bugs.chromium.org/p/chromium/issues/detail?id=7731 (2015)
 
