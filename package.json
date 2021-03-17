@@ -10,6 +10,7 @@
   "dependencies": {
     "bootstrap-daterangepicker": "^3.0.5",
     "core-js": "^3.6.2",
+    "postcss-unprefix": "^2.1.4",
     "selectize": "^0.12.6",
     "slick-carousel": "^1.8.1",
     "yt-player": "^3.4.3"

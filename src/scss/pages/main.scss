@@ -25,30 +25,36 @@ body {
     overflow: -moz-scrollbars-none;
     overflow-x: hidden;
     .container {
+      width: 100%;
       @include xl-devices {
         max-width: 1530px !important;
         padding: 0;
         margin: 0 auto;
+        width: 100%;
       }
       @include lg-devices {
         max-width: 1140px;
         padding: 0;
         margin: 0 auto;
+        width: 100%;
       }
       @include md-devices {
         max-width: 940px;
         padding: 0;
         margin: 0 auto;
+        width: 100%;
       }
       @include sm-devices {
         max-width: 720px;
         padding: 0;
         margin: 0 auto;
+        width: 100%;
       }
       @include xs-devices {
         max-width: 320px;
         padding: 0;
         margin: 0 auto;
+        width: 100%;
       }
     }
     .container-fluid {
