@@ -1,0 +1,296 @@
+.about_webinar_event {
+  position: relative;
+  padding: 0;
+  .container-fluid {
+    @include xl-devices {
+      width: calc((100vw - 1530px) / 2 + 1530px);
+      padding-left: calc((100vw - 1530px) / 2) !important;
+      margin-right: calc((100vw - 1530px) / 2);
+    }
+    @include lg-devices {
+      width: calc((100vw - 1140px) / 2 + 1140px);
+      padding-left: calc((100vw - 1140px) / 2) !important;
+      margin-right: calc((100vw - 1140px) / 2);
+    }
+    @include md-devices {
+      width: calc((100vw - 940px) / 2 + 940px);
+      padding-left: calc((100vw - 940px) / 2) !important;
+      margin-right: calc((100vw - 940px) / 2);
+    }
+    @include sm-devices {
+      width: 100%;
+    }
+    @include xs-devices {
+      width: 100%;
+    }
+  }
+  &-content {
+    position: relative;
+    min-height: 830px;
+    width: 100%;
+    padding: 100px 0 0 0;
+    z-index: 60;
+    @include lg-devices {
+      min-height: 695px;
+    }
+    @include md-devices {
+      min-height: 622px;
+    }
+    @include sm-devices {
+      padding: 60px 0 0 0;
+      min-height: 418px;
+    }
+    @include xs-devices {
+      padding: 60px 0 0 0;
+      min-height: 695px;
+    }
+    .content__title {
+      display: block;
+      font-family: $font-main;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 49px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #333333;
+      margin: 0 auto 50px auto;
+      word-break: break-word;
+      @include sm-devices {
+        margin: 0 auto 30px auto;
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      @include xs-devices {
+        margin: 0 auto 30px auto;
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    }
+  }
+  &-content-body {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    @include sm-devices {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    @include xs-devices {
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 0 10px 0 10px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+    .content-body__image {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0 30px 0 0;
+      position: relative;
+      width: 100%;
+      max-width: 749px;
+      overflow-x: hidden;
+      @include lg-devices {
+        max-width: 558px;
+      }
+      @include md-devices {
+        max-width: 455px;
+      }
+      @include sm-devices {
+        max-width: 345px;
+        overflow-x: visible;
+      }
+      @include xs-devices {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 30px 0;
+      }
+      img {
+        position: relative;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        @include xl-devices {
+          width: 100%;
+        }
+        @include xs-devices {
+          max-height: 213px;
+        }
+      }
+    }
+    .content-body__info.infoblock {
+      height: 531px;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      overflow: visible !important;
+      background: transparent;
+      width: 100%;
+      cursor: pointer;
+      @include lg-devices {
+        height: 396px;
+      }
+      @include md-devices {
+        height: 323px;
+      }
+      @include sm-devices {
+        height: 245px;
+      }
+      @include xs-devices {
+        height: 275px;
+      }
+      .info__header {
+        display: block;
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #333;
+        margin: 0 0 20px 0;
+        word-break: break-word;
+        @include sm-devices {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        @include xs-devices {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .info__text {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        margin: 0 0 40px 0;
+        color: #6c6c6c;
+        word-break: break-word;
+        a {
+          display: inline;
+          font-size: inherit;
+          font-family: inherit;
+          color: #8764da;
+          text-decoration: underline;
+          cursor: pointer;
+          &:focus {
+            outline: none;
+          }
+          &:hover {
+            text-decoration: none;
+            color: #8764da;
+          }
+        }
+        @include sm-devices {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        @include xs-devices {
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .os-scrollbar.os-scrollbar-vertical {
+        left: calc(0% - 14px);
+        @media screen and (max-width: 325px) {
+          left: calc(0% - 8px);
+        }
+        .os-scrollbar-track.os-scrollbar-track-off {
+          background: #e0e0e0;
+          width: 30%;
+          .os-scrollbar-handle {
+            min-height: 27.5%;
+            background: #8764da;
+          }
+        }
+      }
+    }
+  }
+  .info-block-wrapper {
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    width: 100%;
+    max-width: 650px;
+    @include lg-devices {
+      max-width: 489px;
+    }
+    @include md-devices {
+      max-width: 404px;
+    }
+    @include sm-devices {
+      max-width: 345px;
+    }
+    @include xs-devices {
+      width: 100%;
+      flex: initial;
+    }
+  }
+  .content-shadow {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    box-shadow: inset 0 -8px 8px -8px #f9f6ff, inset 0 10px 8px -8px #f9f6ff;
+  }
+  .content-shadow.top {
+    box-shadow: inset 0 140px 140px -80px #f9f6ff;
+  }
+  .content-shadow.bottom {
+    box-shadow: inset 0 -140px 140px -80px #f9f6ff;
+  }
+}
+
+.about_webinar_event::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -1px;
+  height: 195px;
+  z-index: 50;
+  background: #423462;
+  clip-path: polygon(0 0, 100% 0, 100% 63%, 0% 100%, 0 100%);
+  transform: scaleX(-1);
+  display: none;
+  @include xl-devices {
+    width: calc((100vw - 1530px) / 2);
+    display: block;
+    height: 320px;
+    clip-path: polygon(0 0, 100% 0, 100% 74%, 0% 100%, 0 100%);
+  }
+  @include lg-devices {
+    width: calc((100vw - 1140px) / 2);
+    display: block;
+    height: 295px;
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 0% 100%, 0 100%);
+    top: -2px;
+  }
+  @include md-devices {
+    width: calc((100vw - 940px) / 2);
+    display: block;
+    height: 155px;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%, 0 100%);
+    top: -2px;
+  }
+}

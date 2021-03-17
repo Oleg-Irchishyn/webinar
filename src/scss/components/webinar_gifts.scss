@@ -1,0 +1,238 @@
+.webinar_gifts {
+  position: relative;
+  padding: 100px 0 0 0;
+  @include sm-devices {
+    padding: 60px 0 0 0;
+  }
+  @include xs-devices {
+    padding: 60px 0 0 0;
+  }
+  &-content {
+    position: relative;
+    .content__title {
+      display: block;
+      font-family: $font-main;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 49px;
+      text-align: center;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #333333;
+      margin: 0 auto 30px auto;
+      word-break: break-word;
+      @include sm-devices {
+        margin: 0 auto 20px auto;
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+      @include xs-devices {
+        margin: 0 auto 20px auto;
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    }
+    .content__description {
+      display: block;
+      margin: 0 auto;
+      max-width: 750px;
+      font-family: $font-main;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 25px;
+      text-align: center;
+      color: #6c6c6c;
+      word-break: break-word;
+      @include sm-devices {
+        max-width: 470px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+      }
+      @include xs-devices {
+        max-width: 300px;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+      }
+    }
+  }
+  &-content-body {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin: 50px 0 0 0;
+    @include sm-devices {
+      margin: 30px 0 0 0;
+    }
+    @include xs-devices {
+      margin: 30px 0 0 0;
+      flex-direction: column;
+      align-items: center;
+    }
+    .content-body__item {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+      padding: 30px;
+      min-height: 100%;
+      max-width: 490px;
+      width: 100%;
+      margin: 0 30px 30px 0;
+      cursor: pointer;
+      &:hover {
+        .item-img {
+          transform: scale(1.1);
+          transition: 0.2s ease;
+        }
+      }
+      &:focus {
+        outline: none;
+      }
+      @include lg-devices {
+        max-width: 360px;
+      }
+      @include md-devices {
+        max-width: 455px;
+      }
+      @include sm-devices {
+        padding: 10px;
+        max-width: 345px;
+      }
+      @include xs-devices {
+        padding: 10px;
+        max-width: 300px;
+        margin: 0 0 30px 0;
+      }
+      .item-title {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        text-align: center;
+        word-break: break-word;
+        margin: 0 0 15px 0;
+        @include sm-devices {
+          font-size: 16px;
+          line-height: 19px;
+        }
+        @include xs-devices {
+          font-size: 16px;
+          line-height: 19px;
+        }
+      }
+      .item-descr {
+        font-family: $font-main;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        color: #ffffff;
+        word-break: break-word;
+        margin: 0 0 30px 0;
+        @include sm-devices {
+          font-size: 12px;
+          line-height: 17px;
+        }
+        @include xs-devices {
+          font-size: 12px;
+          line-height: 17px;
+          margin: 0 0 15px 0;
+        }
+      }
+      .item-img {
+        display: block;
+        margin: 0 0 40px 0;
+        max-width: 190px;
+        width: 100%;
+        height: auto;
+        transition: 0.2s ease;
+        @include sm-devices {
+          max-width: 116px;
+          margin: 0 0 10px 0;
+        }
+        @include xs-devices {
+          max-width: 116px;
+          margin: 0 0 10px 0;
+        }
+      }
+      .item-amount {
+        position: relative;
+        font-family: $font-main;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        color: #fff;
+        text-align: left;
+        align-self: flex-start;
+        @include sm-devices {
+          font-size: 12px;
+          line-height: 17px;
+        }
+        @include xs-devices {
+          font-size: 12px;
+          line-height: 17px;
+        }
+        span {
+          font-family: inherit;
+          line-height: inherit;
+          font-size: inherit;
+          color: inherit;
+        }
+      }
+    }
+    .content-body__item::after {
+      content: '';
+      width: 101px;
+      height: 101px;
+      background: #f5f1ff;
+      position: absolute;
+      right: -1px;
+      bottom: -1px;
+      z-index: 2;
+      clip-path: polygon(0 0, 100% 0, 100% -12%, -7% 100%, 0 100%);
+      transform: scaleX(-1) rotate(270deg);
+      @include sm-devices {
+        width: 62px;
+        height: 62px;
+      }
+      @include xs-devices {
+        width: 62px;
+        height: 62px;
+      }
+    }
+    .content-body__item:nth-child(3n) {
+      @include xl-devices {
+        margin-right: 0;
+      }
+      @include lg-devices {
+        margin-right: 0;
+      }
+    }
+    .content-body__item:nth-child(2n) {
+      @include md-devices {
+        margin-right: 0;
+      }
+      @include sm-devices {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<%= _.template(require('./../includes/head.html').default)(data) %>
+<body style="background-color: #fff; font-family: Roboto, sans-serif" class="gk-webinar">
+  <%= _.template(require('./../includes/header.html').default)(data) %>
+  <%=_.template(require('./../includes/hero_screen.html').default)(data) %>
+  <%=_.template(require('./../includes/about_webinar_event.html').default)(data) %>
+  <%=_.template(require('./../includes/about_webinar_speaker.html').default)(data) %>
+  <%=_.template(require('./../includes/webinar_gifts.html').default)(data) %>
+  <%=_.template(require('./../includes/webinar_news.html').default)(data) %>
+  <%=_.template(require('./../includes/webinar_partners.html').default)(data) %>
+  <%=_.template(require('./../includes/footer.html').default)(data) %>
+  <%=_.template(require('./../includes/modals/register_modal.html').default)(data) %>
+  <%=_.template(require('./../includes/modals/thanks_modal.html').default)(data) %>
+  <%=_.template(require('./../includes/page_end.html').default)(data) %>
+</body>

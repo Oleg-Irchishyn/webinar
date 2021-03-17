@@ -1,0 +1,65 @@
+// LIBS
+$fa-font-display: swap;
+@import '../js/components/libs/fontawesome/scss/mixins';
+@import '../js/components/libs/fontawesome/scss/variables';
+@import '../js/components/libs/fontawesome/scss/brands.scss';
+@import '../js/components/libs/fontawesome/scss/fontawesome.scss';
+@import '../js/components/libs/fontawesome/scss/regular.scss';
+@import '../js/components/libs/fontawesome/scss/solid.scss';
+@import '../js/components/libs/fontawesome/scss/core';
+@import '../js/components/libs/fontawesome/scss/fixed-width';
+@import '../js/components/libs/fontawesome/scss/icons';
+@import '../js/components/libs/fontawesome/scss/larger';
+@import '../js/components/libs/fontawesome/scss/list';
+@import '../js/components/libs/fontawesome/scss/rotated-flipped';
+@import '../js/components/libs/fontawesome/scss/screen-reader';
+@import '../js/components/libs/fontawesome/scss/stacked';
+@import '../js/components/libs/fontawesome/scss/shims';
+@import '../js/components/libs/fontawesome/scss/v4-shims.scss';
+@import '~bootstrap/scss/bootstrap';
+@import '../js/components/libs/slick-carousel/slick/slick.css';
+@import '../js/components/libs/OverlayScrollbars/OverlayScrollbars.min.css';
+
+// VARIABLES AND MIXINS
+$font-stack: inherit;
+$font-main: inherit;
+
+@mixin xs-devices {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin sm-devices {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin md-devices {
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin lg-devices {
+  @media screen and (min-width: 1200px) and (max-width: 1919px) {
+    @content;
+  }
+}
+@mixin xl-devices {
+  @media screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+// COMPONENTS
+@import './components/webinar_header';
+@import './components/webinar_hero_screen';
+@import './components/about_webinar_event';
+@import './components/about_webinar_speaker';
+@import './components/webinar_gifts';
+@import './components/webinar_news';
+@import './components/webinar_partners';
+@import './components/webinar_footer';
+@import './components/modals/modals';
+
+// PAGES
+@import './pages/main';
